@@ -1,0 +1,105 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+/* Fonts */
+
+@font-family: Roboto, "Helvetica Neue", sans-serif;
+@font-size-primary: 18px;
+@font-size-secondary: 16px;
+@font-size-ternary: 13px;
+@font-size-20: 20px;
+@font-size-12: 12px;
+@font-size-14: 14px;
+
+/* Colors */
+
+@primary-color: #607C8C;
+@secondary-color: #f2ac25;
+@warning-color: #993333;
+@active-color: #E4E7E8;
+@activerfq-color: #ECEFF0;
+@primary-background: #EEEEEE;
+@secondary-background: #FFFFFF;
+@primary-font-color: rgba(0, 0, 0, .87);
+@secondary-font-color: rgba(0, 0, 0, .54);
+@title-color: rgba(0, 0, 0, 0.75);
+@disable-color: rgba(0, 0, 0, 0.36);
+@disable-get-quote-color: rgba(0, 0, 0, 0.26);
+@inactive-tab-color: rgba(96, 124, 140, 0.7);
+@primary-color-button-pressed-color: rgba(96, 124, 140, 0.4);
+@primary-color-button-hover-color: rgba(96, 124, 140, 0.12);
+@secondary-color-button-pressed-color: rgba(232, 130, 13, 0.4);
+@secondary-color-button-hover-color: rgba(232, 130, 13, 0.12);
+
+/* Widths and Heights */
+
+@page-min-width: 320px;
+@medium-font-weight: 600;
+@font-weight-800: 800;
+@font-weight-400: 400;
+@default-padding: 20px;
+@top-nav-height: 75px;
+@side-nav-width: 255px;
+@contract-button-width: 69px;
+@left-nav-link-height: 60px;
+
+/* Misc */
+
+@default-border-color: rgba(0, 0, 0, 0.12);
+@common-border: 1px solid @default-border-color;
+
+html, body {
+    margin: 0px;
+    font-size: @font-size-ternary;
+    padding: 0px;
+    height: 100%;
+    user-select: none;
+    min-width: @page-min-width;
+    width: 100%;
+    overflow: hidden;
+    button, div {
+        font-family: @font-family;
+    }
+}
+
+.cdk-overlay-container {
+    .cdk-global-overlay-wrapper {
+        justify-content: center;
+        align-items: center;
+    }
+    .mat-autocomplete-panel {
+        border: 1px solid @default-border-color;
+        width: 300px;
+        .customer-option {
+            height: 55px;
+            padding: 10px 25px 0 25px;
+            font-size: 13px;
+            font-weight: @medium-font-weight;
+            line-height: 25px;
+            border-bottom: 1px solid @default-border-color;
+            .name {
+                color: @primary-font-color;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .number {
+                color: @secondary-font-color;
+            }
+        }
+    }
+    .dummy-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        color: #FFFFFF;
+    }
+    .mat-checkbox-layout {
+        display: inline-block;
+    }
+}
+
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+    opacity: 1;
+}
+

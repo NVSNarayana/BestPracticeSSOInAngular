@@ -1,0 +1,23 @@
+{
+    "employees": [
+        {
+            "eno": 1,
+            "ename": "A",
+            "age": 33
+        }
+    ],
+    "students": [
+        {
+            "sno": 1,
+            "sname": "S",
+            "age": 20
+        }
+    ],
+    "customers": [
+        {
+            "cno": 1,
+            "cname": "C",
+            "age": 49
+        }
+    ]
+}

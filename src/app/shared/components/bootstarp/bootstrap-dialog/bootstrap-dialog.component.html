@@ -1,0 +1,23 @@
+<div fxLayout="row" class="bootstrap-dialog-container" *ngIf="args">
+  <div class="modal fade" [id]="args.id" role="dialog" tabindex='-1'>
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header title-bar" *ngIf="args.needHeader">
+          <div class="modal-title title" [innerHTML]="args.headerHtml | safeHtml"></div>
+          <button *ngIf="args.needCloseButton" (click)="handleCancel()" md-button class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body content-bar">
+          <div fxLayout="row">
+            <ng-container *ngComponentOutlet="args.component"></ng-container>
+          </div>
+        </div>
+        <div class="modal-footer" *ngIf="args.needFooter">
+          <button md-button (click)="handleOK()">{{args.okButtonText}}</button>
+          <button md-button (click)="handleCancel()">{{args.cancelButtonText}}</button>
+        </div>
+      </div>
+      <div class="dynamic-css" [innerHTML]="args.css | safeHtml" *ngIf="args.css"></div>
+    </div>
+  </div>
+</div>

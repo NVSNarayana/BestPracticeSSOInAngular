@@ -1,0 +1,13 @@
+<div class="overlay-container" [id]="args.id" fxLayout="column" [style.zIndex]="args.zIndex" [class.overlay-dialog-container]="!(args.zIndex)">
+  <div class="title-bar" *ngIf="args.needHeader">
+    <button mat-icon-button class="back" (click)="closeOverlay()" *ngIf="args.needBackArrow">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <div class="title" [innerHTML]="args.headerHtml | safeHtml"></div>
+  </div>
+  <div class="title-bar-banner" [innerHTML]="args.bannerHtml | safeHtml" *ngIf="args.needBanner"></div>
+  <div class="dynamic-component-container">
+    <ng-container *ngComponentOutlet="args.component"></ng-container>
+  </div>
+  <div class="dynamic-css" [innerHTML]="args.css | safeHtml" *ngIf="args.css"></div>
+</div>

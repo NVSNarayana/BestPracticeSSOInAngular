@@ -1,0 +1,9 @@
+{
+	"googleAnalytics": {
+		"trackingId": "UA-12115036-9"
+	},
+	"sso": {
+		"authority":"https://sso-beta.intlfcstone.com",
+		"clientId":"751869a2-fe4d-4eeb-a6a8-f0ba774b5699"
+	}
+}
